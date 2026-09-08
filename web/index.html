@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#173653" />
+    <meta name="description" content="Een interactief Nederlandstalig reisverhaal waarin kinderen van 8 tot 12 jaar Frans leren met Zayd en Razan." />
+    <meta property="og:title" content="Op reis met Zayd en Razan – Naar Parijs" />
+    <meta property="og:description" content="Lees, luister en speel mee tijdens een interactief avontuur in Parijs." />
+    <meta property="og:image" content="https://zayd-razan-apprendre.zaydrazan.chatgpt.site/paris-hero.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Op reis met Zayd en Razan</title>
+    <link rel="preload" href="/paris-hero.png" as="image" fetchpriority="high" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script defer src="/app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <button class="brand" data-view="home" aria-label="Start">
+        <span class="brand-mark"><b>Z</b><b>R</b></span>
+        <span><strong>Op reis met</strong><em>Zayd en Razan</em></span>
+      </button>
+      <nav aria-label="Hoofdnavigatie">
+        <button data-view="home">🏠 Start</button>
+        <button data-view="story">📖 Boek</button>
+        <button data-view="progress">⭐ Paspoort</button>
+      </nav>
+    </header>
+    <main id="app" aria-live="polite"></main>
+    <footer>
+      <span class="brand-dot">Z · R</span>
+      <p>Een taal leren is al een beetje reizen.</p>
+      <small>Voor kinderen van 8–12 jaar · Voortgang blijft op dit apparaat.</small>
+    </footer>
+  </body>
+</html>
