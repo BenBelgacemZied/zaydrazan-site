@@ -267,8 +267,9 @@ nav button.active { background: #153653; color: #fff; box-shadow: 0 5px 14px rgb
   box-shadow: var(--shadow);
 }
 .child-story-header { padding: 25px clamp(18px,3vw,36px); gap: 20px; }
-.child-story-header h1 { color: var(--ink); font: 800 clamp(25px,3vw,38px)/1.15 Georgia, "Times New Roman", serif; }
-.back-to-route { border-radius: 12px; background: #e8f4fb; }
+.child-story-header h1 { color: #fff; font: 800 clamp(25px,3vw,38px)/1.15 Georgia, "Times New Roman", serif; }
+.child-story-header > div > span { color: rgba(255,255,255,.76); }
+.back-to-route { border-radius: 12px; background: #e8f4fb; color: var(--ink); }
 .chapter-stage-nav { margin: 0 clamp(18px,3vw,36px) 25px; gap: 10px; }
 .chapter-stage-nav button {
   min-height: 62px;
