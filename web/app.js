@@ -304,9 +304,9 @@ function homeView() {
   return `
     <section class="book-hero book-hero-v2">
       <div class="book-hero-copy">
-        <span class="eyebrow">KLAAR VOOR PARIJS?</span>
-        <h1>Reis mee met<br><em>Zayd en Razan!</em></h1>
-        <p class="book-lead">Lees een stukje, tik op Franse woorden en verbind ze met hun Nederlandse betekenis. Zo leer je Frans tijdens het avontuur.</p>
+        <span class="eyebrow">JOUW AVONTUUR BEGINT HIER</span>
+        <h1>Op naar Parijs<br>met <em>Zayd &amp; Razan!</em></h1>
+        <p class="book-lead">Pak je koffer en reis mee! Ontdek het verhaal, luister naar Franse woorden en speel onderweg.</p><div class="adventure-tags"><span>8–12 jaar</span><span>10 etappes</span><span>Nederlands → Frans</span></div>
         <div class="book-actions">
           <button class="primary child-primary" data-start-book>${percent ? `Ga verder met etappe ${next.number}` : "Start het avontuur"} <span>→</span></button>
         </div>
@@ -328,7 +328,7 @@ function homeView() {
     </section>
 
     <section class="chapter-preview">
-      <div class="section-heading child-section-heading"><div><span class="section-kicker">JOUW REISROUTE</span><h2>Kies een etappe</h2></div><p>Begin bij de eerste open etappe. Nieuwe etappes komen vanzelf vrij.</p></div>
+      <div class="section-heading child-section-heading"><div><span class="section-kicker">JOUW REISROUTE</span><h2>Van thuis naar de Eiffeltoren</h2></div><p>Begin bij de eerste open etappe. Nieuwe etappes komen vanzelf vrij.</p></div>
       <div class="chapter-preview-grid chapter-preview-grid-v2">${PARIS_CHAPTERS.map((chapter, index) => previewCard(chapter, index)).join("")}</div>
     </section>`;
 }
