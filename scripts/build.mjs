@@ -8,6 +8,7 @@ const server = resolve(dist, "server");
 const html = await readFile(resolve(root, "web/index.html"), "utf8");
 const privacyPage = await readFile(resolve(root, "web/privacy/index.html"), "utf8");
 const css = await readFile(resolve(root, "app/globals.css"), "utf8");
+const redesign = await readFile(resolve(root, "web/redesign.css"), "utf8");
 const js = await readFile(resolve(root, "web/app.js"), "utf8");
 const heroBase64 = (await readFile(resolve(root, "web/paris-hero.png"))).toString("base64");
 const bookSceneDirectory = resolve(root, "web/book-scenes");
@@ -28,6 +29,7 @@ await mkdir(resolve(dist, ".openai"), { recursive: true });
 await writeFile(resolve(client, "index.html"), html);
 await writeFile(resolve(client, "privacy", "index.html"), privacyPage);
 await writeFile(resolve(client, "styles.css"), css);
+await writeFile(resolve(client, "redesign.css"), redesign);
 await writeFile(resolve(client, "app.js"), js);
 await writeFile(resolve(client, "favicon.svg"), favicon);
 await cp(resolve(root, "web/paris-hero.png"), resolve(client, "paris-hero.png"));
@@ -41,6 +43,7 @@ const files = {
   "/privacy": { type: "text/html; charset=utf-8", body: ${JSON.stringify(privacyPage)} },
   "/privacy/": { type: "text/html; charset=utf-8", body: ${JSON.stringify(privacyPage)} },
   "/styles.css": { type: "text/css; charset=utf-8", body: ${JSON.stringify(css)} },
+  "/redesign.css": { type: "text/css; charset=utf-8", body: ${JSON.stringify(redesign)} },
   "/app.js": { type: "text/javascript; charset=utf-8", body: ${JSON.stringify(js)} },
   "/paris-hero.png": { type: "image/png", base64: ${JSON.stringify(heroBase64)} },
 ${bookSceneEntries},
