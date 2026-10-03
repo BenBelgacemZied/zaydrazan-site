@@ -350,3 +350,57 @@ footer a { color: var(--blue); font-weight: 700; text-underline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+/* October 2026: a distinct adventure homepage */
+body { background: #f5f8fc; }
+#app:has(.book-hero-v2) { padding-top: 24px; }
+.book-hero.book-hero-v2 {
+  width: calc(100% - 48px);
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 52px;
+  border-radius: 32px;
+  background: linear-gradient(125deg, #102d4b, #175587);
+  color: #fff;
+  box-shadow: 0 18px 40px rgba(16,45,75,.16);
+  overflow: hidden;
+  align-items: center;
+}
+.book-hero-copy .eyebrow { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.2); color: #ffe0a1; }
+.book-hero-copy .eyebrow::before { background: #ffc84a; }
+.book-hero-copy h1 { color: #fff; font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif; font-size: clamp(40px,4.5vw,64px); line-height: 1.05; letter-spacing: -.04em; font-weight: 850; }
+.book-hero-copy h1 em { color: #ffc84a; font-style: normal; }
+.book-hero-copy h1 em::after { display: none; }
+.book-lead { color: #dceafb; font-size: 18px; }
+.adventure-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; }
+.adventure-tags span { padding: 7px 11px; border: 1px solid rgba(255,255,255,.22); border-radius: 99px; color: #e9f5ff; font-size: 12px; font-weight: 700; }
+.book-actions .child-primary { background: #ffc84a; color: #102d4b; border-radius: 14px; box-shadow: 0 8px 22px rgba(0,0,0,.18); }
+.home-progress-card { background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.17); box-shadow: none; color: #fff; }
+.home-progress-card strong, .home-progress-card small { color: #fff; }
+.home-progress-card .book-progress-line { background: rgba(255,255,255,.2); }
+.hero-illustration-card.hero-book-collage { aspect-ratio: 1.35 / 1; background: #eaf5fc; border-radius: 24px; border-width: 5px; }
+.hero-book-main { inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: contain; border-radius: 18px; box-shadow: none; }
+.hero-stamp { width: 86px; height: 86px; right: 12px !important; bottom: 12px !important; }
+.home-steps { max-width: 1190px; margin: 24px auto 0; }
+.home-steps article { border-radius: 18px; box-shadow: 0 5px 15px rgba(21,54,83,.05); }
+.chapter-preview { padding-top: 60px; }
+.child-section-heading h2 { font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif; font-weight: 800; font-size: clamp(30px,4vw,42px); }
+.preview-card.current { border-color: #2878b9; }
+.child-story-header h1 { color: #fff !important; }
+@media (max-width: 860px) {
+  .book-hero.book-hero-v2 { padding: 36px; gap: 28px; }
+  .hero-illustration-card.hero-book-collage { max-width: 100%; aspect-ratio: 1.5 / 1; }
+}
+@media (max-width: 560px) {
+  #app:has(.book-hero-v2) { padding-top: 12px; }
+  .book-hero.book-hero-v2 { width: calc(100% - 24px); padding: 26px 20px; border-radius: 22px; gap: 22px; }
+  .book-hero-copy h1 { font-size: clamp(36px,10vw,46px); }
+  .book-lead { font-size: 16px; }
+  .book-actions .child-primary { width: 100%; }
+  .home-progress-card { padding: 13px; }
+  .hero-illustration-card.hero-book-collage { aspect-ratio: 1.5 / 1; }
+  .hero-stamp { width: 68px; height: 68px; }
+  .hero-stamp strong { font-size: 12px; }
+  .hero-stamp small { font-size: 7px; }
+  .home-steps { margin-top: 16px; padding: 0 12px; }
+}
