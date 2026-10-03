@@ -404,3 +404,11 @@ body { background: #f5f8fc; }
   .hero-stamp small { font-size: 7px; }
   .home-steps { margin-top: 16px; padding: 0 12px; }
 }
+
+/* Override the legacy homepage selectors with matching specificity. */
+.book-hero-v2 .book-hero-copy h1 { color: #fff; font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif; font-size: clamp(40px,4.5vw,64px); font-weight: 850; line-height: 1.05; }
+.book-hero-v2 .book-hero-copy h1 em { color: #ffc84a; font-style: normal; }
+.book-hero-v2 .book-hero-copy h1 em::after { display: none; }
+.book-hero-v2 .book-lead { color: #dceafb; }
+.hero-book-collage .hero-book-main { transform: none; object-fit: contain; }
+@media (max-width: 560px) { .book-hero-v2 .book-hero-copy h1 { font-size: clamp(36px,10vw,46px); } }
